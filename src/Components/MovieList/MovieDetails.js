@@ -1,11 +1,12 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom/cjs/react-router-dom.min'
+import { useHistory, useLocation } from 'react-router-dom/cjs/react-router-dom.min'
 import styles from './MovieDetails.module.css';
 import ReactPlayer from 'react-player/youtube';
+import Button from 'react-bootstrap/Button';
 
 
 const MovieDetails = () => {
-  
+  const history = useHistory();
   const location = useLocation();
   const {movieData} = location.state || {};
 
@@ -24,8 +25,14 @@ const MovieDetails = () => {
 ];
   
  const uniqueVideo = videoData.find(video=> video.imdbID === movieData.imdbID)
- const youtubeUrl  = uniqueVideo.video
-  console.log(youtubeUrl)
+ 
+ const videoHandler= ()=>{
+    history.push({
+      pathname:`/movie/${movieData.imdbID}/${movieData.imdbID}`,
+      state:{movieData : uniqueVideo}
+    })
+ }
+  
 
   return (
     <>
@@ -46,14 +53,10 @@ const MovieDetails = () => {
                     width="100%"
                     height="100%"
                     />
+                     <Button  className={styles.watchNow} onClick={()=> videoHandler()}>WatchNow</Button>{' '}
                  </div>
 
-</div>
-
-
-
-
-
+                </div>
 
 
                 <div className={styles.detailContainer}>
