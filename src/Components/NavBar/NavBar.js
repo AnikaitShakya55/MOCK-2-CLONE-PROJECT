@@ -5,20 +5,21 @@ import { FaSearchengin } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { MdAccountCircle } from "react-icons/md";
 import styles from './NavBar.module.css';
+import { Link, NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 
 
 
 
 const NavBar = () => {
   return (
-    <div>
+    <div className={styles.navContainer}>
 
         <nav>
             <ul className={styles.navul}>
-                <li><a href='#' ><CiHome/></a></li>
-                <li><a href='#'><IoHome/></a></li>
-                <li><a href='#'><FaSearchengin/></a></li>
-                <li><a href='#'><MdAccountCircle/></a></li>
+                <li className={styles.navLi}><NavLink to='/' ><CiHome/></NavLink></li>
+                <li className={styles.navLi}><NavLink to='/'><IoHome/></NavLink></li>
+                <li className={styles.navLi}><NavLink to='#'><FaSearchengin/></NavLink></li>
+                <li className={styles.navLi}><NavLink to='#'><MdAccountCircle/></NavLink></li>
             </ul>
         </nav>
       

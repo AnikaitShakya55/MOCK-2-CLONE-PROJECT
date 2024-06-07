@@ -1,13 +1,29 @@
-.navul{
-    list-style: none;
-    z-index: 1000;
+.navContainer {
     position: fixed;
-    
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 80px;
+    box-shadow: transparent;
+    z-index: 1000;
 }
 
-li{ 
-    margin-top: 50px;
-    font-size: 30px;
-
+.navul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 20px;
 }
 
+.navLi {
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    font-size: 35px;
+
+}

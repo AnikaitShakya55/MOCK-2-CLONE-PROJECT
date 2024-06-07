@@ -1,0 +1,40 @@
+.detailContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 40vh;
+}
+
+.detailImg {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.details {
+    margin-left: 20px;
+}
+
+.detailh1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.detailInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.detailp {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.detailp::before {
+    content: attr(data-label);
+    font-weight: bold;
+    margin-right: 5px;
+}

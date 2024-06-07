@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import styles from './FetchMovies.module.css'
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 const FetchMovies = () => {
     const [movieData, setMovieData] = useState([]);
+    const history = useHistory();
 
     useEffect(() => {
         fetch('http://www.omdbapi.com/?s=thor&page=1&apikey=1a65c31&', {
@@ -29,7 +31,10 @@ const FetchMovies = () => {
 
 
     const imageHandler = movie=>{
-            
+            history.push({
+                pathname: `/movie/${movie.imdbID}`,
+                state:{movieData:movie},
+            })
     }
 
     return (
