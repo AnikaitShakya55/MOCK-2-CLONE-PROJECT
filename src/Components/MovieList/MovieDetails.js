@@ -30,26 +30,48 @@ const MovieDetails = () => {
   return (
     <>
 
-            {movieData && (
+  {movieData && (
+
+  <div className={styles.mainContainer}>
+
+               <div className={styles.videoOverlay}>
+                   <div className={styles.videoWrapper}>
+                    <ReactPlayer
+                    url={uniqueVideo.video}
+                    playing={true}
+                    controls={false}
+                    loop={true}
+                    muted={true}
+                    className={styles.reactPlayer}
+                    width="100%"
+                    height="100%"
+                    />
+                 </div>
+
+</div>
+
+
+
+
+
+
+
                 <div className={styles.detailContainer}>
-                    <img className={styles.detailImg} src={movieData.Poster} alt={movieData.Title} />
+
+  
+            
                     <div className={styles.details}>
+                    <img className={styles.detailImg} src={movieData.Poster} alt={movieData.Title} />
                         <h1 className={styles.detailh1}>{movieData.Title}</h1>
                         <div className={styles.detailInfo}>
                             <p className={styles.detailp} data-label="Year:">{movieData.Year}</p>
                             <p className={styles.detailp} data-label="Type:">{movieData.Type}</p>
-                              
-                            {uniqueVideo && (
-                                <div className={styles.videoWrapper}>
-                                    <ReactPlayer url={uniqueVideo.video} controls />
-                                </div>
-                            )}
-
-
-
+                        
                         </div>
                     </div>
                 </div>
+
+        </div>
             )}
       
     </>

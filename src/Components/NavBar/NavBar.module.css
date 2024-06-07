@@ -5,6 +5,7 @@
     left: 0;
     width: 80px;
     box-shadow: transparent;
+    background-color: transparent;
     z-index: 1000;
 }
 
