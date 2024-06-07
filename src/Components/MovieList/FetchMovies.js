@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import styles from './FetchMovies.module.css'
 
 const FetchMovies = () => {
     const [movieData, setMovieData] = useState([]);
@@ -25,18 +26,23 @@ const FetchMovies = () => {
         });
     }, []);
 
+
+
+    const imageHandler = movie=>{
+            
+    }
+
     return (
         <div>
-            <div>
+            <ul className={styles.movieUl}>
             {
                     movieData.Search && movieData.Search.map((movie) => (
-                        <li key={movie.imdbID}>
-                            <img src={movie.Poster} alt={movie.Title} />
-                            <p>{movie.Title} ({movie.Year})</p>
+                        <li key={movie.imdbID} className={styles.movieLi}>
+                            <img className={styles.movieImg} src={movie.Poster} alt={movie.Title} onClick={()=> imageHandler(movie)} />
                         </li>
                     ))
                 }
-            </div>
+            </ul>
         </div>
     );
 }

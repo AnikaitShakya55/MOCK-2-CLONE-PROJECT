@@ -1,0 +1,30 @@
+.movieUl{
+    position: relative;
+    top: 20vh;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.movieLi{
+    
+    
+
+}
+
+.movieLi:hover{
+    
+}
+
+
+.movieImg{
+    height: 150px;
+    transition: transform 0.3s ease; 
+}
+
+.movieImg:hover{
+    transform: scale(1.3);
+}

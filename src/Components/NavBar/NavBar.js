@@ -4,7 +4,7 @@ import { IoHome } from "react-icons/io5";
 import { FaSearchengin } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { MdAccountCircle } from "react-icons/md";
-import './NavBar.css'
+import styles from './NavBar.module.css';
 
 
 
@@ -14,7 +14,7 @@ const NavBar = () => {
     <div>
 
         <nav>
-            <ul>
+            <ul className={styles.navul}>
                 <li><a href='#' ><CiHome/></a></li>
                 <li><a href='#'><IoHome/></a></li>
                 <li><a href='#'><FaSearchengin/></a></li>

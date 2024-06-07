@@ -1,6 +1,9 @@
 import React from 'react'
 import NavBar from './Components/NavBar/NavBar'
 import HomePage from './Pages/HomePage'
+import './App.css'
+import { Route } from 'react-router-dom/cjs/react-router-dom.min'
+import MovieDetails from './Components/MovieList/MovieDetails'
 
 const App = () => {
 
@@ -11,7 +14,9 @@ const App = () => {
         
         <main>
 
-          <HomePage/>
+          <Route path='/'><HomePage/></Route>
+          <Route path='/movie/:movieId'><MovieDetails/></Route>
+
 
         </main>
 
