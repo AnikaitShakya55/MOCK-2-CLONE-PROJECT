@@ -1,5 +1,6 @@
 import React from 'react'
-import NavBar from './Components/NavBar'
+import NavBar from './Components/NavBar/NavBar'
+import HomePage from './Pages/HomePage'
 
 const App = () => {
 
@@ -9,6 +10,8 @@ const App = () => {
        <NavBar/>
         
         <main>
+
+          <HomePage/>
 
         </main>
 
