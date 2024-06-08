@@ -5,8 +5,7 @@ import './HomePage.css'
 const HomePage = () => {
   return (
     <div>
-        <h1 className='h1'>THUNDER OF GOD</h1>
-      
+        <h1 className='h1'>GOD OF THUNDER</h1>
         <FetchMovies/>
       
     </div>
