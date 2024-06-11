@@ -15,10 +15,10 @@ const NavBar = () => {
 
         <nav>
             <ul className={styles.navul}>
-                <li className={styles.navLi}><NavLink to='/' ><CiHome/></NavLink></li>
-                <li className={styles.navLi}><NavLink to='/'><IoHome/></NavLink></li>
-                <li className={styles.navLi}><NavLink to='#'><FaSearchengin/></NavLink></li>
-                <li className={styles.navLi}><NavLink to='#'><MdAccountCircle/></NavLink></li>
+                <li className={styles.navLi}><NavLink to='/' ><CiHome style={{'color':'whitesmoke'}}/></NavLink></li>
+                <li className={styles.navLi}><NavLink to='/'><IoHome style={{'color':'whitesmoke'}} /></NavLink></li>
+                <li className={styles.navLi}><NavLink to='#'><FaSearchengin style={{'color':'whitesmoke'}}/></NavLink></li>
+                <li className={styles.navLi}><NavLink to='#'><MdAccountCircle style={{'color':'whitesmoke'}}/></NavLink></li>
             </ul>
         </nav>
       

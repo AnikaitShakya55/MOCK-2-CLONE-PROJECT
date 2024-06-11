@@ -1,31 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import styles from './FetchMovies.module.css'
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { FetchMoviesApi } from '../../api/api';
 
 const FetchMovies = () => {
     const [movieData, setMovieData] = useState([]);
     const history = useHistory();
 
     useEffect(() => {
-        fetch('http://www.omdbapi.com/?s=thor&page=1&apikey=1a65c31&', {
-            method: 'GET'
-        })
-
-        .then((res) => {
-            if(res.ok) {
-                console.log(movieData)
-                return res.json();
-            } else {
-                throw new Error("ERROR WHILE FETCHING");
-            }
-        })
-        .then((data) => {
-            console.log(data)
-            setMovieData(data);
-        })
-        .catch((err) => {
-            console.log(err);
-        });
+        
+    FetchMoviesApi('http://www.omdbapi.com/?s=thor&page=1&apikey=1a65c31&')
+    .then((data)=> setMovieData(data))       
+       
+      
     }, []);
 
 
